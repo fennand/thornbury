@@ -239,7 +239,6 @@ li a:hover:not(.active1) {
 }
 
 .p-left {
-  float: left;
   margin: 0rem 8rem 1.5rem 4rem;
   text-align: justify;
 }
@@ -629,18 +628,6 @@ p {
     left: 50%;
   }
 } */
-
-@media only screen and (min-width: 1920px) {
-  .p-left {
-    width: 45%;
-  }
-}
-
-@media only screen and (max-width: 1620px) {
-  .p-left {
-    width: 80%;
-  }
-}
 
 @media only screen and (max-width: 1620px) {
   .img-old {
