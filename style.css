@@ -960,3 +960,14 @@ p {
     display: none;
   }
 }
+
+#sidebar-menu ul li {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+}
+
+#sidebar-menu ul li a {
+  display: block;
+  padding: 12px 16px;
+}
