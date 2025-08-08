@@ -8,59 +8,58 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+<!-- AOS Animate on Scroll -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <img class="img-logo" src="/images/thornbury-logo.png">
-      <div class="links">    
-        <ul>
-  <li><a href="/index.html">Home</a></li>
-  <li><a href="/services.html">Services</a></li>
-  <li><a href="/atmospheric.html">Atmospheric Technologies</a></li>
-  <li><a href="/sani.html">Sani-99</a></li>
-  <li><a href="/health.html">Enjoy Health</a></li>
-  <li><a href="/contact.html">Contact Us</a></li>
-</ul>
-      </div>
+ <!-- MOBILE TOGGLE INPUT -->
+<input type="checkbox" id="menu-toggle" />
+<div include-html="/header.html"></div>
 
-<input type="checkbox" id="hamburger-input" class="burger-shower" />
-<label id="hamburger-menu" for="hamburger-input">
-  <nav id="sidebar-menu">
-    <h3>X</h3>
-    <ul>
-  <li><a href="/index.html">Home</a></li>
-  <li><a href="/services.html">Services</a></li>
-  <li><a href="/atmospheric.html">Atmos Tech</a></li>
-  <li><a href="/sani.html">Sani-99</a></li>
-  <li><a href="/health.html">Enjoy Health</a></li>
-  <li><a href="/contact.html">Contact Us</a></li>
-</ul>
-  </nav>
-</label>
 
-<div class="overlay"></div>
+<!-- Mobile Nav -->
+<div class="mobile-nav">
+  <label for="menu-toggle" class="close-btn">&times;</label>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/services.html">Services</a></li>
+    <li><a href="/atmospheric.html">Atmospheric Technologies</a></li>
+    <li><a href="/sani.html">Sani-99</a></li>
+    <li><a class="active1" href="/health.html">Enjoy Health</a></li>
+    <li><a href="/contact.html">Contact Us</a></li>
+  </ul>
+</div>
 
-  </header>
+<!-- HERO SECTION -->
+<section class="hero">
+  <img src="/images/EnjoyHealth.jpg" alt="Hero Image" class="hero-bg" />
+    </div>
+</section>
 
 <main>
 
-<section class="section-banner">
-  <img class="hero-image" src="/images/EnjoyHealth.jpg">
-</section>
-
 <section class="section-health">
-  <h1 class="title-centre">Enjoy Health</h1>
-  <p class="p-left">Enjoy Health is a brand that empowers you in your pursuit of good health and wellness. Their vision is to be a global brand leader in 
+  <h1 data-aos="fade-up" class="title-centre">Enjoy Health</h1>
+  <p data-aos="fade-up" class="p-left">Enjoy Health is a brand that empowers you in your pursuit of good health and wellness. Their vision is to be a global brand leader in 
   sustainable and innovative healthy food and lifestyle products. Please see the PDF below for more information.</p>
   </section>
-  <div class="pdf-wrapper"><embed src="/images/Enjoy Health Proposal for INVESTORS-1.pdf" type="application/pdf" width="100%" height="600px" />
+  <div data-aos="fade-up" class="pdf-wrapper"><embed src="/images/Enjoy Health Proposal for INVESTORS-1.pdf" type="application/pdf" width="100%" height="600px" />
   </div>
-  <div class="link-hidden"><a href="/images/Enjoy Health Proposal for INVESTORS-1.pdf">Click here to download Enjoy Health PDF</a>
+  <div data-aos="fade-up" class="link-hidden"><a href="/images/Enjoy Health Proposal for INVESTORS-1.pdf">Click here to download Enjoy Health PDF</a>
+  </main></body>
+<div include-html="/footer.html"></div>
 
-  </main>
-  <footer>
-    <p class="foot-left">Thornbury Ltd, reg address Kemp House, 160 City Road, London EC1V 2NX</p>
-    <p class="foot-right">Email: info@thornburyltd.co.uk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone: 0207 965 7305</p>
-  </footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  document.querySelectorAll('[include-html]').forEach(async (el) => {
+    const file = el.getAttribute('include-html');
+    const res = await fetch(file);
+    if (res.ok) el.innerHTML = await res.text();
+  });
+</script>
 </body>
 </html>
+        

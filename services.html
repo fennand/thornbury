@@ -3,71 +3,62 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Thornbury Ltd - Services</title>
+    <title>Thornbury Ltd</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+<!-- AOS Animate on Scroll -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <img class="img-logo" src="/images/thornbury-logo.png">
-      <div class="links">    
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a class="active1" href="#">Services</a></li>
-          <li><a href="/atmospheric.html">Atmospheric Technologies</a></li>
-          <li><a href="/sani.html">Sani-99</a></li>
-          <li><a href="/health.html">Enjoy Health</a></li>
-          <li><a href="/contact.html">Contact Us</a></li>
-        </ul>
-      </div>
+ <!-- MOBILE TOGGLE INPUT -->
+<input type="checkbox" id="menu-toggle" />
+<div include-html="/header.html"></div>
 
-    <input type="checkbox" id="hamburger-input" class="burger-shower" />
-    <label id="hamburger-menu" for="hamburger-input">
-      <nav id="sidebar-menu">
-        <h3>X</h3>
-        <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a class="active1" href="#">Services</a></li>
-          <li><a href="/atmospheric.html">Atmos Tech</a></li>
-          <li><a href="/sani.html">Sani-99</a></li>
-          <li><a href="/health.html">Enjoy Health</a></li>
-          <li><a href="/contact.html">Contact Us</a></li>
-        </ul>
-      </nav>
-    </label>
 
-    <div class="overlay"></div>
-  </header>
+<!-- Mobile Nav -->
+<div class="mobile-nav">
+  <label for="menu-toggle" class="close-btn">&times;</label>
+  <ul>
+    <li><a href="/index.html">Home</a></li>
+    <li><a class="active1" href="/services.html">Services</a></li>
+    <li><a href="/atmospheric.html">Atmospheric Technologies</a></li>
+    <li><a href="/sani.html">Sani-99</a></li>
+    <li><a href="/health.html">Enjoy Health</a></li>
+    <li><a href="/contact.html">Contact Us</a></li>
+  </ul>
+</div>
 
-<main>
-
-<section class="section-banner">
-  <img class="hero-image" src="/images/header1.jpg">
+<!-- HERO SECTION -->
+<section class="hero">
+  <img src="/images/header1.jpg" alt="Hero Image" class="hero-bg" />
+  <div class="hero-content" data-aos="fade-up">
+    <p class="hero-text">Services We Specialise In</p>
+  </div>
 </section>
-
+<main>
 <section>
-  <h1 class="title-centre-atmos">Our Services</h1>
+  <h1 data-aos="fade-up" class="title-centre-atmos">Our Services</h1>
 
-  <h2 class="h2-team">Import / Export</h2>
-  <p class="p-left-atmos">
+  <h2 data-aos="fade-up" class="h2-team">Import / Export</h2>
+  <p data-aos="fade-up" class="p-left-atmos">
     Thornbury Ltd specialises in international import and export operations, ensuring seamless trade across multiple sectors. 
     Our team manages logistics, compliance, and customs to make cross-border transactions simple and efficient. 
     We work closely with trusted global partners to guarantee the secure and timely delivery of goods worldwide.
   </p>
-  <hr class="line">
+  <hr data-aos="fade-left" class="line">
 
-  <h2 class="h2-team">Wholesale</h2>
-  <p class="p-left-atmos">
+  <h2 data-aos="fade-up" class="h2-team">Wholesale</h2>
+  <p data-aos="fade-up" class="p-left-atmos">
     We offer wholesale solutions tailored to meet the needs of both small and large enterprises. 
     Our focus is on delivering competitive pricing, reliable product availability, and exceptional customer service. 
     With extensive experience in bulk distribution, we help businesses streamline their supply chains and maximise profitability.
   </p>
-  <hr class="line">
+  <hr data-aos="fade-left" class="line">
 
-  <h2 class="h2-team">Office Supplies</h2>
-  <p class="p-left-atmos">
+  <h2 data-aos="fade-up" class="h2-team">Office Supplies</h2>
+  <p data-aos="fade-up" class="p-left-atmos">
     Thornbury Ltd provides comprehensive office supply solutions to help organisations stay productive. 
     From everyday essentials to specialist products, we deliver high-quality supplies that keep workplaces running smoothly. 
     Our team ensures fast delivery and cost-effective options to meet the demands of modern businesses.
@@ -76,9 +67,19 @@
 </section>
 
 </main>
-  <footer>
-    <p class="foot-left">Thornbury Ltd, reg address Kemp House, 160 City Road, London EC1V 2NX</p>
-    <p class="foot-right">Email: info@thornburyltd.co.uk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone: 0207 965 7305</p>
-  </footer>
+<div include-html="/footer.html"></div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  document.querySelectorAll('[include-html]').forEach(async (el) => {
+    const file = el.getAttribute('include-html');
+    const res = await fetch(file);
+    if (res.ok) el.innerHTML = await res.text();
+  });
+</script>
 </body>
 </html>
+        

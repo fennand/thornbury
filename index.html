@@ -8,98 +8,95 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+<!-- AOS Animate on Scroll -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <img class="img-logo" src="/images/thornbury-logo.png">
-      <div class="links">    
-        <ul>
-          <li><a class="active1" href="#">Home</a></li>
-          <li><a href="/services.html">Services</a></li>
-  <li><a href="/atmospheric.html">Atmospheric Technologies</a></li>
-  <li><a href="/sani.html">Sani-99</a></li>
-  <li><a href="/health.html">Enjoy Health</a></li>
-  <li><a href="/contact.html">Contact Us</a></li>
-</ul>
-      </div>
+ <!-- MOBILE TOGGLE INPUT -->
+<input type="checkbox" id="menu-toggle" />
+<div include-html="/header.html"></div>
 
-<input type="checkbox" id="hamburger-input" class="burger-shower" />
-<label id="hamburger-menu" for="hamburger-input">
-  <nav id="sidebar-menu">
-    <h3>X</h3>
-    <ul>
-      <li><a class="active1" href="#">Home</a></li>
-          <li><a href="/services.html">Services</a></li>
-  <li><a href="/atmospheric.html">Atmos Tech</a></li>
-  <li><a href="/sani.html">Sani-99</a></li>
-  <li><a href="/health.html">Enjoy Health</a></li>
-  <li><a href="/contact.html">Contact Us</a></li>
-</ul>
-  </nav>
-</label>
 
-<div class="overlay"></div>
+<!-- Mobile Nav -->
+<div class="mobile-nav">
+  <label for="menu-toggle" class="close-btn">&times;</label>
+  <ul>
+    <li><a class="active1" href="/index.html">Home</a></li>
+    <li><a href="/services.html">Services</a></li>
+    <li><a href="/atmospheric.html">Atmospheric Technologies</a></li>
+    <li><a href="/sani.html">Sani-99</a></li>
+    <li><a href="/health.html">Enjoy Health</a></li>
+    <li><a href="/contact.html">Contact Us</a></li>
+  </ul>
+</div>
 
-  </header>
-
-<main>
-
-<section class="section-banner">
-  <img class="hero-image" src="/images/header1.jpg">
-    <div class="hero-text">
-      <p class="hero-p">A holding company</p>
-    </div>
+<!-- HERO SECTION -->
+<section class="hero">
+  <img src="/images/header1.jpg" alt="Hero Image" class="hero-bg" />
+  <div class="hero-content" data-aos="fade-up">
+    <p class="hero-text">A holding company</p>
+  </div>
 </section>
 
+<main>
 <section class="section-main">
-  <h1 class="title-centre">Our Team</h1>
-    <h2 class="h2-team"> Joseph Fennell - Chief Executive Officer (CEO)</h2>
-      <p class="p-left">Joseph has a wealth of experience in sales and marketing.  He has excellent negotiation skills which he has successfully used when dealing with major companies.
+  <h1 data-aos="fade-up" class="title-centre">Our Team</h1>
+    <h2 data-aos="fade-up" class="h2-team"> Joseph Fennell - Chief Executive Officer (CEO)</h2>
+      <p data-aos="fade-up" class="p-left">Joseph has a wealth of experience in sales and marketing.  He has excellent negotiation skills which he has successfully used when dealing with major companies.
       Joseph is a Sales and Marketing Director for a Tier 1 US backed company. He was responsible for increasing the turnover in business by a substantial ammount, as well as the expansion 
       of its overseas sites. Joseph has vast experience in marketing and sales and has secured contracts with major retail and manufacturing companies over the years. His long term objective 
       is to deliver a quality product to the customer at an affordable price. Joseph’s marketing and pricing strategy will ensure customers will get more for less.</p>
-        <hr class="line">
+        <hr data-aos="fade-left" class="line">
 
-    <h2 class="h2-team">Alan Kitchin - Non-Executive Director</h2>
-      <p class="p-left">Alan brings an immense plethora of knowledge and expertise to his role as Non-Executive Director. He studied law initially at the British Institute in Florence and 
+    <h2 data-aos="fade-up" class="h2-team">Alan Kitchin - Non-Executive Director</h2>
+      <p data-aos="fade-up" class="p-left">Alan brings an immense plethora of knowledge and expertise to his role as Non-Executive Director. He studied law initially at the British Institute in Florence and 
       then at Cambridge University (Gonville and Caius College), where he won the Senior Squire Scholarship in Law. On graduating, he was awarded the Tapp Postgraduate Scholarship in Law, 
       and he has lectured at Standford University with the American Law Institute on International Trade. Alan became a Christian while at Cambrdige University, and now both supports and 
       volunteers with the charity Christian Aid.</br></br>
       Alan first qualified as a foreign lawyer in Japan in 1991, and was also the Chairman of the Law Asia Committee on Energy. Alan started working in New York with the international law 
       firm Freshfields Bruckhaus Deringer, however later moved back to London to join Ashurst as a partner. This saw Alan in this post for twenty four years, before becoming the Managing 
       Partner of its Asia practice. He is currently a Managing Partner of Simpson Kitchin LLP, and is a solicitor of the Supreme Court of England and Wales.</p>
-        <hr class="line">
+        <hr data-aos="fade-left" class="line">
             
-    <h2 class="h2-team">Sarah Wright  -  Managing Director - Stakeholder Engagement</h2>
-      <p class="p-left">Sarah has a BSc Hons degree in Geography from Liverpool John Moores University. She also has Master’s degree in Leadership and Management Development which she obtained 
+    <h2 data-aos="fade-up" class="h2-team">Sarah Wright  -  Managing Director - Stakeholder Engagement</h2>
+      <p data-aos="fade-up" class="p-left">Sarah has a BSc Hons degree in Geography from Liverpool John Moores University. She also has Master’s degree in Leadership and Management Development which she obtained 
       from Edge Hill University.</br></br>  
       Sarah is a strong and experienced sales professional. She is a Key Account Manager with a demonstrated history of working in the oil and energy industry. She has extensive experience 
       dealing with commercial and industrial sectors, and a proven record in project management. Sarah is confident engaging with stakeholders and endeavours to ensure she managers their 
       expectations. Sarah has secured major contracts with high profile stakeholders and her skills reach as far as analytical thinking and problem solving. Sarah is a very experienced speaker 
       and has given presentations and chaired meetings at the highest board level.</p>      
-        <hr class="line">
+        <hr data-aos="fade-left"class="line">
            
-        <h2 class="h2-team">Muhammed Hanif Mahud  - Contracts Director (Overseas)</h2>
-      <p class="p-left">Muhammed is an experienced project manager with a Master’s degree in science. He has a proven record as an experienced senior contracts executive. He has vast knowledge 
+        <h2 data-aos="fade-up" class="h2-team">Muhammed Hanif Mahud  - Contracts Director (Overseas)</h2>
+      <p data-aos="fade-up" class="p-left">Muhammed is an experienced project manager with a Master’s degree in science. He has a proven record as an experienced senior contracts executive. He has vast knowledge 
       and experience of the South Asia utilities market.  He is responsible for stakeholder engagement with our overseas partners, and project management. Muhammed is involved with marketing, 
       company branding and advertising.</p>
-        <hr class="line">  
+        <hr data-aos="fade-left" class="line">  
 
-    <h2 class="h2-team">Carl Wright  -  Project and Research Director</h2>
-      <p class="p-left">Carl is a strong management professional with a BSc Hons degree in Geography from Edge Hill University. He also has a NVQ Level 5 from the institute of Leadership and 
+    <h2 data-aos="fade-up" class="h2-team">Carl Wright  -  Project and Research Director</h2>
+      <p data-aos="fade-up" class="p-left">Carl is a strong management professional with a BSc Hons degree in Geography from Edge Hill University. He also has a NVQ Level 5 from the institute of Leadership and 
       Management.  Carl is an experienced analyst and manager with a demonstrated history of data management within the petroleum and utilities industry. He excels in roles involving leadership 
       and developing high performing teams of analysts to deliver exceptional customer service in order to achieve company goals and objectives.</br></br>  
       Carl is a systematic and organised professional who is highly skilled in analytical thinking, problem solving and people management. Carl brings a wealth of experience to the company 
       including organisation skills, planning and coaching and excellent communication skills. Carl is responsible for managing staff and project management including stakeholder engagement.</p>
-        <hr class="line">
+        
 
 </section>
 
-</main>
-  <footer>
-    <p class="foot-left">Thornbury Ltd, reg address Kemp House, 160 City Road, London EC1V 2NX</p>
-    <p class="foot-right">Email: info@thornburyltd.co.uk&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone: 0207 965 7305</p>
-  </footer>
+</main></body>
+<div include-html="/footer.html"></div>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  document.querySelectorAll('[include-html]').forEach(async (el) => {
+    const file = el.getAttribute('include-html');
+    const res = await fetch(file);
+    if (res.ok) el.innerHTML = await res.text();
+  });
+</script>
 </body>
 </html>
         
