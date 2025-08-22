@@ -231,11 +231,25 @@ hr {
 iframe 
 {margin:1rem;}
 
-.video-wrapper, .p-centre {
+ .p-centre {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 2rem 0;
+ }
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* optional for nicer look */
 }
   /* --- Bullet List Styling --- */
   .a {
@@ -306,7 +320,33 @@ iframe
     }
   }
 
+  /* Hide mobile button on desktop */
+.btn-view {
+  display: none;
+  padding: 0.6rem 1.2rem;
+  background-color: #06402B;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
 
+.btn-view:hover {
+  background-color: #046a46;
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+  .pdf-frame {
+    display: none; /* Hide iframe */
+  }
+  .btn-view {
+    display: block; /* Show button */
+  }
+}
 
 
 /* ===== FOOTER ===== */
