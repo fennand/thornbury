@@ -1,21 +1,48 @@
-<header class="site-header">
-  <div class="header-container">
-    <!-- Logo -->
-    <img class="img-logo" src="/images/thornbury-logo.png" alt="Thornbury Logo" />
+<header>
+  <!-- Logo -->
+  <a href="/index.html" class="logo">
+    <img src="/images/thornbury-logo.png" alt="Thornbury Ltd" class="img-logo">
+  </a>
 
-    <!-- Hamburger aligned right -->
-    <label for="menu-toggle" class="hamburger">&#9776;</label>
+  <!-- Hamburger button for mobile -->
+  <input type="checkbox" id="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
 
-    <!-- Desktop Nav -->
-    <nav class="main-nav">
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/services.html">Services</a></li>
-        <!-- <li><a href="/atmospheric.html">Atmospheric Technologies</a></li>
-        <li><a href="/sani.html">Sani-99</a></li>
-        <li><a href="/health.html">Enjoy Health</a></li> -->
-        <li><a href="/contact.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
+  <!-- Desktop navigation -->
+  <nav class="desktop-nav">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li class="dropdown">
+        <a href="#">Products ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/storage.html">Storage</a></li>
+          <li><a href="/computers.html">Computers</a></li>
+          <li><a href="/printers.html">Printers & Scanners</a></li>
+        </ul>
+      </li>
+      <li><a href="/contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mobile navigation -->
+  <nav class="mobile-nav">
+    <label for="menu-toggle" class="close-btn">&times;</label>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/services.html">Services</a></li>
+
+      <li class="has-submenu">
+  <span class="submenu-label">Products ▾</span>
+  <ul class="submenu">
+    <li><a href="/storage.html">Storage</a></li>
+    <li><a href="/computers.html">Computers</a></li>
+    <li><a href="/printers.html">Printers & Scanners</a></li>
+  </ul>
+</li>
+
+
+      <li><a href="/contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
 </header>

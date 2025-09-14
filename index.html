@@ -13,22 +13,8 @@
 </head>
 <body>
  <!-- MOBILE TOGGLE INPUT -->
-<input type="checkbox" id="menu-toggle" />
 <div include-html="/header.html"></div>
 
-
-<!-- Mobile Nav -->
-<div class="mobile-nav">
-  <label for="menu-toggle" class="close-btn">&times;</label>
-  <ul>
-    <li><a class="active1" href="/index.html">Home</a></li>
-    <li><a href="/services.html">Services</a></li>
-    <!-- <li><a href="/atmospheric.html">Atmospheric Technologies</a></li>
-    <li><a href="/sani.html">Sani-99</a></li>
-    <li><a href="/health.html">Enjoy Health</a></li> -->
-    <li><a href="/contact.html">Contact Us</a></li>
-  </ul>
-</div>
 
 <!-- HERO SECTION -->
 <section class="hero">
@@ -97,6 +83,27 @@
     if (res.ok) el.innerHTML = await res.text();
   });
 </script>
+<script>
+  // Wait until the header is loaded
+  document.querySelectorAll('[include-html]').forEach(async (el) => {
+    const file = el.getAttribute('include-html');
+    const res = await fetch(file);
+    if (res.ok) {
+      el.innerHTML = await res.text();
+
+      // Attach mobile submenu toggle AFTER the HTML is inserted
+      const submenuLabels = el.querySelectorAll('.mobile-nav .submenu-label');
+      submenuLabels.forEach(label => {
+        label.addEventListener('click', () => {
+          const parentLi = label.parentElement;
+          parentLi.classList.toggle('open');
+        });
+      });
+    }
+  });
+</script>
+
+
 </body>
 </html>
         
